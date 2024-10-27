@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calendar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+    <div class="calendar-container">
+        <div class="calendar-header">
+            <span class="material-icons nav-icon" id="prevBtn">chevron_left</span>
+            <h2 id="monthDisplay"></h2>
+            <span class="material-icons nav-icon" id="nextBtn">chevron_right</span>
+        </div>
+        <div class="calendar-days" id="daysContainer"></div>
+    </div>
+
+    <div class="task-modal" id="taskModal">
+        <div class="modal-content">
+            <h3 id="modalTitle">Tasks</h3>
+            <div class="tasks-list" id="tasksList"></div>
+            <input type="text" id="taskInput" placeholder="Enter a new task">
+            <div class="modal-buttons">
+                <button class="add-task-btn" id="addTaskBtn">Add Task</button>
+                <button class="close-btn" id="closeBtn">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

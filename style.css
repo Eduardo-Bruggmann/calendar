@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f4f8;
+}
+
+.calendar-container {
+    width: 90%;
+    max-width: 500px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.calendar-header h2 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.nav-icon {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.calendar-day {
+    padding: 10px;
+    text-align: center;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+    cursor: pointer;
+}
+
+.calendar-day.today {
+    background-color: #ff6347;
+    color: #fff;
+}
+
+.calendar-day.has-task {
+    background-color: #1e90ff;
+    color: #fff;
+}
+
+.calendar-day:hover {
+    background-color: #e0e0e0;
+}
+
+.task-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 8px;
+}
+
+.modal-content h3 {
+    margin-bottom: 10px;
+}
+
+.tasks-list {
+    margin: 10px 0;
+}
+
+#taskInput {
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+button.close-btn, button.add-task-btn, button.delete-task-btn {
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button.close-btn {
+    background-color: #ff6347;
+}
+
+button.add-task-btn {
+    background-color: #1e90ff;
+}
+
+button.delete-task-btn {
+    background-color: #ff0000;
+    margin-left: 15px;
+}
